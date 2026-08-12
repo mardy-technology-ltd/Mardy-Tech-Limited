@@ -126,7 +126,7 @@ export function MobileNav({ items }: MobileNavProps) {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
               onClick={closeMenu}
-              className="fixed inset-0 bg-background/80 backdrop-blur-md"
+              className="fixed inset-0 bg-background/90 backdrop-blur-xl"
               aria-hidden="true"
             />
 
@@ -141,7 +141,7 @@ export function MobileNav({ items }: MobileNavProps) {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
-              className="relative z-10 flex h-full w-full max-w-xs flex-col justify-between border-l border-border/60 bg-background p-6 shadow-2xl"
+              className="relative z-50 flex h-full w-full max-w-sm flex-col justify-between border-l border-border bg-background p-6 shadow-2xl"
             >
               <div className="space-y-6">
                 {/* Header inside drawer */}
