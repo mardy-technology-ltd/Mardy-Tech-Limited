@@ -9,43 +9,43 @@ const footerColumns: FooterColumn[] = [
   {
     title: "Product",
     links: [
-      { label: "Theme Engine", href: "#" },
-      { label: "Design System", href: "#" },
-      { label: "Components", href: "#" },
-      { label: "Framer Animations", href: "#" },
+      { label: "Theme Engine", href: "/#tokens" },
+      { label: "Services & Tech", href: "/services" },
+      { label: "Agency Portfolio", href: "/portfolio" },
+      { label: "Contact & Intake", href: "/contact" },
     ],
   },
   {
-    title: "Resources",
+    title: "Services",
     links: [
-      { label: "Documentation", href: "#" },
-      { label: "API Reference", href: "#" },
-      { label: "Guides", href: "#" },
-      { label: "Changelog", href: "#" },
+      { label: "Next.js Architecture", href: "/services" },
+      { label: "Motion UI & Animations", href: "/services" },
+      { label: "State & API Security", href: "/services" },
+      { label: "Edge Performance", href: "/services" },
     ],
   },
   {
     title: "Company",
     links: [
-      { label: "About Mardy Tech", href: "#" },
-      { label: "Careers", href: "#" },
-      { label: "Blog", href: "#" },
-      { label: "Contact Us", href: "#" },
+      { label: "About Mardy Tech", href: "/about" },
+      { label: "Our Portfolio", href: "/portfolio" },
+      { label: "Technical Inquiry", href: "/contact" },
+      { label: "Latest Works", href: "/portfolio" },
     ],
   },
   {
     title: "Legal",
     links: [
-      { label: "Privacy Policy", href: "#" },
-      { label: "Terms of Service", href: "#" },
-      { label: "Cookie Settings", href: "#" },
-      { label: "Security", href: "#" },
+      { label: "Privacy Policy", href: "/privacy" },
+      { label: "Terms of Service", href: "/terms" },
+      { label: "Cookie Settings", href: "/privacy" },
+      { label: "Security Standards", href: "/terms" },
     ],
   },
 ];
 
 const socialLinks: SocialLink[] = [
-  { platform: "GitHub", href: "https://github.com", iconName: "github" },
+  { platform: "GitHub", href: "https://github.com/mardy-technology-ltd", iconName: "github" },
   { platform: "Twitter", href: "https://twitter.com", iconName: "twitter" },
   { platform: "LinkedIn", href: "https://linkedin.com", iconName: "linkedin" },
   { platform: "Discord", href: "https://discord.com", iconName: "discord" },

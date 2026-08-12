@@ -11,9 +11,10 @@ import { cn } from "@/lib/utils";
 
 const defaultNavItems: NavItem[] = [
   { label: "Home", href: "/" },
-  { label: "Services", href: "/#services" },
-  { label: "Portfolio", href: "/#portfolio" },
-  { label: "Contact Us", href: "/contact", badge: "Inquire" },
+  { label: "Services", href: "/services" },
+  { label: "Portfolio", href: "/portfolio" },
+  { label: "About Us", href: "/about" },
+  { label: "Contact", href: "/contact", badge: "Inquire" },
 ];
 
 interface NavbarProps {
