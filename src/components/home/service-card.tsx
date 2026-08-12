@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Code, Cpu, Shield, Sparkles, Layers, Zap, Check, ArrowUpRight } from "lucide-react";
 import { Service } from "@/types";
 import { cn } from "@/lib/utils";
+import { TiltCard } from "@/components/ui/tilt-card";
 
 interface ServiceCardProps {
   service: Service;
@@ -29,11 +30,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
   };
 
   return (
-    <motion.div
-      whileHover={{ y: -6, scale: 1.015 }}
-      transition={{ type: "spring", stiffness: 300, damping: 20 }}
-      className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-border/60 bg-card p-6 shadow-xs backdrop-blur-sm transition-colors hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5"
-    >
+    <TiltCard className="group flex flex-col justify-between overflow-hidden border border-border/60 bg-card p-6 shadow-xs backdrop-blur-sm transition-colors hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5">
       {/* Subtle Background Glow Effect on Hover */}
       <div
         className={cn(
@@ -42,7 +39,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
         )}
       />
 
-      <div className="space-y-5">
+      <div className="space-y-5 relative z-10">
         {/* Card Header: Icon & Badge */}
         <div className="flex items-center justify-between">
           <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-border/60 bg-background/80 shadow-xs transition-colors group-hover:border-primary/40 group-hover:bg-primary/10">
@@ -86,7 +83,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
       </div>
 
       {/* Action Footer */}
-      <div className="pt-6">
+      <div className="pt-6 relative z-10">
         <a
           href={service.ctaHref}
           className="inline-flex w-full items-center justify-between rounded-xl border border-border/60 bg-background px-4 py-2.5 text-sm font-semibold text-foreground shadow-xs transition-colors hover:border-primary/40 hover:bg-primary hover:text-primary-foreground focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring"
@@ -95,6 +92,6 @@ export function ServiceCard({ service }: ServiceCardProps) {
           <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
         </a>
       </div>
-    </motion.div>
+    </TiltCard>
   );
 }
