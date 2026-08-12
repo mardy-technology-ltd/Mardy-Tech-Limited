@@ -9,6 +9,11 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Mardy Tech Limited — Enterprise Software & Frontend Architecture",
   description: "Official web platform for Mardy Tech Limited featuring Next.js 14+ App Router, HSL design tokens, zero-FOUC theme engine, and 3D Canvas motion UI.",
+  icons: {
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+    apple: "/icon.svg",
+  },
 };
 
 export default function RootLayout({
