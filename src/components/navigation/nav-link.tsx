@@ -23,10 +23,10 @@ export function NavLink({ item, onClick, className }: NavLinkProps) {
       target={item.isExternal ? "_blank" : undefined}
       rel={item.isExternal ? "noopener noreferrer" : undefined}
       className={cn(
-        "relative inline-flex items-center gap-1.5 px-3 py-2 text-sm font-medium transition-colors focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-lg",
+        "relative inline-flex items-center gap-2 px-3.5 py-1.5 text-sm font-semibold transition-colors focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-full",
         isActive
-          ? "text-primary font-semibold"
-          : "text-muted-foreground hover:text-foreground hover:bg-muted/50",
+          ? "text-primary font-bold"
+          : "text-muted-foreground hover:text-foreground hover:bg-muted/60",
         className
       )}
       aria-current={isActive ? "page" : undefined}
@@ -34,7 +34,7 @@ export function NavLink({ item, onClick, className }: NavLinkProps) {
       <span>{item.label}</span>
 
       {item.badge && (
-        <span className="rounded-full bg-primary/10 border border-primary/20 px-2 py-0.5 text-[10px] font-semibold text-primary">
+        <span className="rounded-full bg-primary/10 border border-primary/20 px-2 py-0.5 text-[10px] font-bold text-primary">
           {item.badge}
         </span>
       )}
