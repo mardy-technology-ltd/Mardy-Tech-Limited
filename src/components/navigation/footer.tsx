@@ -137,8 +137,6 @@ export function Footer() {
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border/40 pt-8 sm:flex-row text-xs text-muted-foreground">
           <p>© {currentYear} Mardy Tech Limited. All rights reserved.</p>
           <div className="flex items-center gap-4">
-            <span>Powered by Next.js & Tailwind CSS</span>
-            <div className="h-3 w-px bg-border" />
             <ThemeToggle />
           </div>
         </div>
