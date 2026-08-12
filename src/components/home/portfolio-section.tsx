@@ -26,7 +26,7 @@ export function PortfolioSection() {
 
   return (
     <section id="portfolio" className="relative overflow-hidden py-16 sm:py-24 bg-background text-foreground border-t border-border/40">
-      {/* Ambient Background Glows for Widescreen Engagement */}
+      {/* Ambient Background Glows */}
       <div className="absolute inset-0 pointer-events-none -z-10 overflow-hidden select-none">
         <div className="absolute top-1/3 -right-48 h-[750px] w-[750px] rounded-full bg-cyan-500/12 filter blur-[150px] pointer-events-none" />
         <div className="absolute bottom-12 -left-48 h-[700px] w-[700px] rounded-full bg-indigo-500/12 filter blur-[150px] pointer-events-none" />
@@ -37,18 +37,18 @@ export function PortfolioSection() {
         <div className="flex flex-col items-center text-center space-y-4 max-w-3xl mx-auto mb-12">
           <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3.5 py-1 text-xs font-semibold text-primary">
             <FolderKanban className="h-3.5 w-3.5" />
-            <span>Featured Agency Portfolio</span>
+            <span>Featured Case Studies & Work</span>
           </div>
 
           <h2 className="text-3xl font-extrabold tracking-tight sm:text-5xl text-foreground">
-            Crafting Digital Solutions for{" "}
+            Transforming Complex Ideas into{" "}
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Industry Leaders
+              High-Impact Products
             </span>
           </h2>
 
           <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-            Explore our showcase of real-world enterprise applications built with cutting-edge frontend architecture, responsive design tokens, and fluid interactions.
+            Explore how Mardy Tech Limited partners with industry leaders to engineer scalable software solutions, FinTech dashboards, and AI platforms.
           </p>
         </div>
 
@@ -81,7 +81,7 @@ export function PortfolioSection() {
           })}
         </div>
 
-        {/* Animated Project Cards Grid with Widescreen Layout / AnimatePresence */}
+        {/* Animated Project Cards Grid */}
         <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 min-h-[300px]">
           <AnimatePresence mode="popLayout">
             {filteredProjects.length > 0 ? (

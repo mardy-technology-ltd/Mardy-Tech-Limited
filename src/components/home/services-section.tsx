@@ -19,7 +19,7 @@ export function ServicesSection() {
 
   return (
     <section id="services" className="relative overflow-hidden py-16 sm:py-24 bg-background text-foreground border-t border-border/40">
-      {/* Ambient Background Glows for Widescreen Engagement */}
+      {/* Ambient Background Glows */}
       <div className="absolute inset-0 pointer-events-none -z-10 overflow-hidden select-none">
         <div className="absolute top-1/4 -left-48 h-[700px] w-[700px] rounded-full bg-purple-500/12 filter blur-[150px] pointer-events-none" />
         <div className="absolute bottom-10 -right-48 h-[700px] w-[700px] rounded-full bg-teal-500/12 filter blur-[150px] pointer-events-none" />
@@ -35,14 +35,14 @@ export function ServicesSection() {
             </div>
 
             <h2 className="text-3xl font-extrabold tracking-tight sm:text-5xl text-foreground">
-              Built for Speed, Scale &{" "}
+              End-to-End Software Engineering &{" "}
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                Accessibility
+                Digital Product Solutions
               </span>
             </h2>
 
             <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-              Explore our core technical services engineered with Next.js 14+ App Router, HSL color tokens, and 60fps interaction performance.
+              From web app architecture and mobile engineering to custom AI integration, we deliver production-ready software solutions built for performance and growth.
             </p>
           </div>
 
@@ -55,12 +55,12 @@ export function ServicesSection() {
               className="inline-flex items-center gap-2 rounded-xl border border-border/80 bg-card px-4 py-2.5 text-sm font-semibold text-card-foreground shadow-xs transition-colors hover:bg-muted focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring disabled:opacity-50"
             >
               <RefreshCw className={`h-4 w-4 text-primary ${isLoading ? "animate-spin" : ""}`} />
-              <span>{isLoading ? "Fetching Data..." : "Test Shimmer Skeleton"}</span>
+              <span>{isLoading ? "Fetching Data..." : "Test Loading State"}</span>
             </button>
           </div>
         </div>
 
-        {/* Services Responsive Grid with Widescreen Layout */}
+        {/* Services Responsive Grid */}
         <motion.div
           layout
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10"
