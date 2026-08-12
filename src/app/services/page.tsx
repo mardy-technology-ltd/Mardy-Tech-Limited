@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Sparkles, ArrowRight, CheckCircle2, Code2, ShieldCheck, Zap, Layers, Cpu, Code } from "lucide-react";
+import { Sparkles, ArrowRight, CheckCircle2, ShieldCheck } from "lucide-react";
 import { dummyServices } from "@/data/services";
 import { ServiceCard } from "@/components/home/service-card";
 import { Navbar } from "@/components/navigation/navbar";
@@ -19,7 +19,7 @@ export default function ServicesPage() {
       <main className="flex-1">
         {/* Page Hero Header */}
         <section className="relative overflow-hidden pt-12 pb-16 md:pt-20 md:pb-24 bg-background border-b border-border/40">
-          <div className="container mx-auto max-w-6xl px-4 sm:px-6 text-center space-y-6">
+          <div className="max-w-[1400px] w-full mx-auto px-6 md:px-12 lg:px-16 text-center space-y-6">
             <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3.5 py-1 text-xs font-semibold text-primary">
               <Sparkles className="h-3.5 w-3.5" />
               <span>Enterprise Engineering & Capabilities</span>
@@ -56,7 +56,7 @@ export default function ServicesPage() {
 
         {/* Services Grid Section */}
         <section className="py-16 sm:py-24 bg-background">
-          <div className="container mx-auto max-w-6xl px-4 sm:px-6 space-y-12">
+          <div className="max-w-[1400px] w-full mx-auto px-6 md:px-12 lg:px-16 space-y-12">
             <div className="text-center space-y-3 max-w-2xl mx-auto">
               <h2 className="text-3xl font-bold tracking-tight text-foreground">
                 Our Specialized Offerings
@@ -66,7 +66,7 @@ export default function ServicesPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
               {dummyServices.map((service) => (
                 <ServiceCard key={service.id} service={service} />
               ))}
@@ -76,7 +76,7 @@ export default function ServicesPage() {
 
         {/* Engineering Standards / Why Choose Us */}
         <section className="py-16 bg-muted/30 border-t border-border/40">
-          <div className="container mx-auto max-w-6xl px-4 sm:px-6">
+          <div className="max-w-[1400px] w-full mx-auto px-6 md:px-12 lg:px-16">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
                 <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3.5 py-1 text-xs font-semibold text-primary">

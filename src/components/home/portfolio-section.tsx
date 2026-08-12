@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FolderKanban, Sparkles, Inbox } from "lucide-react";
+import { FolderKanban, Inbox } from "lucide-react";
 import { ProjectCategory } from "@/types";
 import { dummyProjects } from "@/data/projects";
 import { ProjectCard } from "./project-card";
@@ -25,8 +25,14 @@ export function PortfolioSection() {
   }, [selectedCategory]);
 
   return (
-    <section id="portfolio" className="py-16 sm:py-24 bg-background text-foreground border-t border-border/40">
-      <div className="container mx-auto max-w-6xl px-4 sm:px-6">
+    <section id="portfolio" className="relative overflow-hidden py-16 sm:py-24 bg-background text-foreground border-t border-border/40">
+      {/* Ambient Background Glows for Widescreen Engagement */}
+      <div className="absolute inset-0 pointer-events-none -z-10 overflow-hidden select-none">
+        <div className="absolute top-1/3 -right-48 h-[650px] w-[650px] rounded-full bg-cyan-500/12 filter blur-[140px] pointer-events-none" />
+        <div className="absolute bottom-12 -left-48 h-[600px] w-[600px] rounded-full bg-indigo-500/12 filter blur-[140px] pointer-events-none" />
+      </div>
+
+      <div className="max-w-[1400px] w-full mx-auto px-6 md:px-12 lg:px-16">
         {/* Section Header */}
         <div className="flex flex-col items-center text-center space-y-4 max-w-3xl mx-auto mb-12">
           <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3.5 py-1 text-xs font-semibold text-primary">
@@ -75,8 +81,8 @@ export function PortfolioSection() {
           })}
         </div>
 
-        {/* Animated Project Cards Grid / AnimatePresence */}
-        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 min-h-[300px]">
+        {/* Animated Project Cards Grid with Wider Gaps / AnimatePresence */}
+        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 min-h-[300px]">
           <AnimatePresence mode="popLayout">
             {filteredProjects.length > 0 ? (
               filteredProjects.map((project, idx) => (
