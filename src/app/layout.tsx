@@ -4,6 +4,7 @@ import { GeistMono } from "geist/font/mono";
 import { ThemeProvider } from "@/components/theme-provider";
 import { SmoothScrollProvider } from "@/components/smooth-scroll-provider";
 import { FloatingWidgets } from "@/components/navigation/floating-widgets";
+import { DigitalNodeNetwork } from "@/components/ui/digital-node-network";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -27,7 +28,7 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${GeistSans.variable} ${GeistMono.variable}`}
     >
-      <body className="min-h-screen bg-background text-foreground font-sans antialiased selection:bg-primary/20 selection:text-primary transition-colors duration-200">
+      <body className="min-h-screen bg-background text-foreground font-sans antialiased selection:bg-primary/20 selection:text-primary transition-colors duration-200 relative">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -35,7 +36,11 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <SmoothScrollProvider>
-            {children}
+            {/* Global 3D Floating Digital Node Network Canvas */}
+            <DigitalNodeNetwork />
+            <div className="relative z-10 flex min-h-screen flex-col">
+              {children}
+            </div>
             <FloatingWidgets />
           </SmoothScrollProvider>
         </ThemeProvider>
