@@ -85,7 +85,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
       {/* Sticky Header Navbar */}
       <Navbar />
 
-      <main className="flex-1 max-w-[1400px] w-full mx-auto px-6 md:px-12 lg:px-16 py-8 sm:py-12">
+      <main className="flex-1 max-w-[1720px] w-full mx-auto px-4 sm:px-8 lg:px-12 py-8 sm:py-12">
         {/* Breadcrumb Navigation */}
         <div className="mb-8">
           <Link

@@ -85,7 +85,7 @@ export function Footer() {
 
   return (
     <footer className="w-full border-t border-border/40 bg-background text-foreground overflow-hidden relative">
-      <div className="max-w-[1400px] w-full mx-auto px-6 md:px-12 lg:px-16 py-12 lg:py-16">
+      <div className="max-w-[1720px] w-full mx-auto px-4 sm:px-8 lg:px-12 py-12 lg:py-16">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-6 lg:gap-12">
           {/* Brand Info Column */}
           <div className="space-y-4 lg:col-span-2">

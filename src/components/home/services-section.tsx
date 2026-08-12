@@ -21,14 +21,14 @@ export function ServicesSection() {
     <section id="services" className="relative overflow-hidden py-16 sm:py-24 bg-background text-foreground border-t border-border/40">
       {/* Ambient Background Glows for Widescreen Engagement */}
       <div className="absolute inset-0 pointer-events-none -z-10 overflow-hidden select-none">
-        <div className="absolute top-1/4 -left-48 h-[600px] w-[600px] rounded-full bg-purple-500/12 filter blur-[140px] pointer-events-none" />
-        <div className="absolute bottom-10 -right-48 h-[600px] w-[600px] rounded-full bg-teal-500/12 filter blur-[140px] pointer-events-none" />
+        <div className="absolute top-1/4 -left-48 h-[700px] w-[700px] rounded-full bg-purple-500/12 filter blur-[150px] pointer-events-none" />
+        <div className="absolute bottom-10 -right-48 h-[700px] w-[700px] rounded-full bg-teal-500/12 filter blur-[150px] pointer-events-none" />
       </div>
 
-      <div className="max-w-[1400px] w-full mx-auto px-6 md:px-12 lg:px-16">
+      <div className="max-w-[1720px] w-full mx-auto px-4 sm:px-8 lg:px-12">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-16">
-          <div className="space-y-4 max-w-2xl">
+          <div className="space-y-4 max-w-3xl">
             <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3.5 py-1 text-xs font-semibold text-primary">
               <Sparkles className="h-3.5 w-3.5" />
               <span>Enterprise Services & Capabilities</span>
@@ -60,10 +60,10 @@ export function ServicesSection() {
           </div>
         </div>
 
-        {/* Services Responsive Grid with Wider Gaps */}
+        {/* Services Responsive Grid with Widescreen Layout */}
         <motion.div
           layout
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10"
         >
           {isLoading
             ? Array.from({ length: 6 }).map((_, index) => (

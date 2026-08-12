@@ -30,7 +30,7 @@ const itemVariants: Variants = {
 export function Hero() {
   return (
     <section className="relative overflow-hidden pt-12 pb-20 md:pt-20 md:pb-32 bg-background text-foreground">
-      {/* Premium Ambient Background Glows (Dark Mode Engaged & Non-blocking) */}
+      {/* Premium Ambient Background Glows */}
       <div className="absolute inset-0 pointer-events-none -z-10 overflow-hidden select-none">
         {/* Soft Cyan/Teal Glow (Top-Right) */}
         <motion.div
@@ -43,7 +43,7 @@ export function Hero() {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="absolute -top-40 -right-40 h-[650px] w-[650px] rounded-full bg-cyan-500/20 filter blur-[130px] pointer-events-none will-change-transform"
+          className="absolute -top-40 -right-40 h-[750px] w-[750px] rounded-full bg-cyan-500/20 filter blur-[140px] pointer-events-none will-change-transform"
         />
 
         {/* Soft Indigo/Purple Glow (Top-Left) */}
@@ -58,7 +58,7 @@ export function Hero() {
             ease: "easeInOut",
             delay: 2,
           }}
-          className="absolute -top-40 -left-40 h-[650px] w-[650px] rounded-full bg-indigo-500/20 filter blur-[130px] pointer-events-none will-change-transform"
+          className="absolute -top-40 -left-40 h-[750px] w-[750px] rounded-full bg-indigo-500/20 filter blur-[140px] pointer-events-none will-change-transform"
         />
 
         {/* SVG Grid Overlay Pattern */}
@@ -80,12 +80,12 @@ export function Hero() {
         </svg>
       </div>
 
-      <div className="max-w-[1400px] w-full mx-auto px-6 md:px-12 lg:px-16">
+      <div className="max-w-[1720px] w-full mx-auto px-4 sm:px-8 lg:px-12">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="flex flex-col items-center text-center space-y-8 max-w-5xl mx-auto"
+          className="flex flex-col items-center text-center space-y-8 max-w-6xl mx-auto"
         >
           {/* Top Pill Badge */}
           <motion.div variants={itemVariants} className="will-change-transform will-change-opacity">
@@ -99,7 +99,7 @@ export function Hero() {
           {/* High-Fidelity Typography Title */}
           <motion.h1
             variants={itemVariants}
-            className="text-4xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl leading-[1.1] text-foreground will-change-transform will-change-opacity"
+            className="text-4xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl xl:text-8xl leading-[1.1] text-foreground will-change-transform will-change-opacity"
           >
             Architecting{" "}
             <span className="bg-gradient-to-r from-primary via-primary/80 to-accent bg-clip-text text-transparent">
@@ -111,7 +111,7 @@ export function Hero() {
           {/* Subtitle / Description */}
           <motion.p
             variants={itemVariants}
-            className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-3xl font-normal will-change-transform will-change-opacity"
+            className="text-lg sm:text-xl lg:text-2xl text-muted-foreground leading-relaxed max-w-3xl font-normal will-change-transform will-change-opacity"
           >
             Zero-FOUC light and dark theme engines, HSL design token pipelines, atomic component architectures, and 60fps Framer Motion interactions.
           </motion.p>
@@ -144,7 +144,7 @@ export function Hero() {
           {/* Quick Metrics Badges */}
           <motion.div
             variants={itemVariants}
-            className="grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-8 pt-10 border-t border-border/40 w-full max-w-3xl text-left will-change-transform will-change-opacity"
+            className="grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-8 pt-10 border-t border-border/40 w-full max-w-4xl text-left will-change-transform will-change-opacity"
           >
             <div className="flex items-center gap-3">
               <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 border border-primary/20 text-primary">

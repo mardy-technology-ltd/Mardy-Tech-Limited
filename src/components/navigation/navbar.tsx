@@ -50,7 +50,7 @@ export function Navbar({ items = defaultNavItems, className }: NavbarProps) {
         className
       )}
     >
-      <div className="max-w-[1400px] w-full mx-auto px-6 md:px-12 lg:px-16 flex h-16 items-center justify-between">
+      <div className="max-w-[1720px] w-full mx-auto px-4 sm:px-8 lg:px-12 flex h-16 items-center justify-between">
         {/* Brand Logo */}
         <Logo />
 
