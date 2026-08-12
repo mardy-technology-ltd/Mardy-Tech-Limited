@@ -2,6 +2,7 @@
 
 import { motion, Variants } from "framer-motion";
 import { ArrowRight, Sparkles, Code2, ShieldCheck } from "lucide-react";
+import { TechSphere3D } from "./tech-sphere-3d";
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -29,7 +30,7 @@ const itemVariants: Variants = {
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden pt-12 pb-20 md:pt-20 md:pb-32 bg-background text-foreground">
+    <section className="relative overflow-hidden pt-10 pb-20 md:pt-16 md:pb-28 bg-background text-foreground">
       {/* Premium Ambient Background Glows */}
       <div className="absolute inset-0 pointer-events-none -z-10 overflow-hidden select-none">
         {/* Soft Cyan/Teal Glow (Top-Right) */}
@@ -81,102 +82,115 @@ export function Hero() {
       </div>
 
       <div className="max-w-[1720px] w-full mx-auto px-4 sm:px-8 lg:px-12">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="flex flex-col items-center text-center space-y-8 max-w-6xl mx-auto"
-        >
-          {/* Top Pill Badge */}
-          <motion.div variants={itemVariants} className="will-change-transform will-change-opacity">
-            <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs sm:text-sm font-medium text-primary shadow-xs backdrop-blur-sm">
-              <Sparkles className="h-4 w-4 animate-pulse text-primary" />
-              <span>Next-Gen Enterprise Frontend Engine</span>
-              <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-            </div>
-          </motion.div>
-
-          {/* High-Fidelity Typography Title */}
-          <motion.h1
-            variants={itemVariants}
-            className="text-4xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl xl:text-8xl leading-[1.1] text-foreground will-change-transform will-change-opacity"
-          >
-            Architecting{" "}
-            <span className="bg-gradient-to-r from-primary via-primary/80 to-accent bg-clip-text text-transparent">
-              Ultra-Fast & Accessible
-            </span>{" "}
-            Web Apps
-          </motion.h1>
-
-          {/* Subtitle / Description */}
-          <motion.p
-            variants={itemVariants}
-            className="text-lg sm:text-xl lg:text-2xl text-muted-foreground leading-relaxed max-w-3xl font-normal will-change-transform will-change-opacity"
-          >
-            Zero-FOUC light and dark theme engines, HSL design token pipelines, atomic component architectures, and 60fps Framer Motion interactions.
-          </motion.p>
-
-          {/* Sequential CTA Buttons */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-12 lg:gap-16">
+          {/* Left Column (7 cols): Headline, Subtitle, CTAs */}
           <motion.div
-            variants={itemVariants}
-            className="flex flex-wrap items-center justify-center gap-4 pt-2 will-change-transform will-change-opacity"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left space-y-8"
           >
-            <motion.a
-              href="#services"
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.97 }}
-              className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-7 py-3.5 text-sm sm:text-base font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-colors hover:bg-primary/90 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-            >
-              <span>Explore Services</span>
-              <ArrowRight className="h-4 w-4" />
-            </motion.a>
+            {/* Top Pill Badge */}
+            <motion.div variants={itemVariants} className="will-change-transform will-change-opacity">
+              <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs sm:text-sm font-medium text-primary shadow-xs backdrop-blur-sm">
+                <Sparkles className="h-4 w-4 animate-pulse text-primary" />
+                <span>Next-Gen Enterprise Frontend Engine</span>
+                <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+              </div>
+            </motion.div>
 
-            <motion.a
-              href="#features"
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.97 }}
-              className="inline-flex items-center justify-center gap-2 rounded-xl border border-border/80 bg-card px-7 py-3.5 text-sm sm:text-base font-semibold text-card-foreground shadow-xs transition-colors hover:bg-muted focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+            {/* High-Fidelity Typography Title */}
+            <motion.h1
+              variants={itemVariants}
+              className="text-4xl font-extrabold tracking-tight sm:text-6xl lg:text-6xl xl:text-7xl leading-[1.1] text-foreground will-change-transform will-change-opacity"
             >
-              <span>View Tech Specs</span>
-            </motion.a>
+              Architecting{" "}
+              <span className="bg-gradient-to-r from-primary via-primary/80 to-accent bg-clip-text text-transparent">
+                Ultra-Fast & Accessible
+              </span>{" "}
+              Web Apps
+            </motion.h1>
+
+            {/* Subtitle / Description */}
+            <motion.p
+              variants={itemVariants}
+              className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-2xl font-normal will-change-transform will-change-opacity"
+            >
+              Zero-FOUC light and dark theme engines, HSL design token pipelines, atomic component architectures, and 60fps Framer Motion interactions.
+            </motion.p>
+
+            {/* Sequential CTA Buttons */}
+            <motion.div
+              variants={itemVariants}
+              className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2 will-change-transform will-change-opacity"
+            >
+              <motion.a
+                href="#services"
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-7 py-3.5 text-sm sm:text-base font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-colors hover:bg-primary/90 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+              >
+                <span>Explore Services</span>
+                <ArrowRight className="h-4 w-4" />
+              </motion.a>
+
+              <motion.a
+                href="#features"
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+                className="inline-flex items-center justify-center gap-2 rounded-xl border border-border/80 bg-card px-7 py-3.5 text-sm sm:text-base font-semibold text-card-foreground shadow-xs transition-colors hover:bg-muted focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+              >
+                <span>View Tech Specs</span>
+              </motion.a>
+            </motion.div>
+
+            {/* Quick Metrics Badges */}
+            <motion.div
+              variants={itemVariants}
+              className="grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-8 pt-8 border-t border-border/40 w-full text-left will-change-transform will-change-opacity"
+            >
+              <div className="flex items-center gap-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 border border-primary/20 text-primary shrink-0">
+                  <Code2 className="h-5 w-5" />
+                </div>
+                <div>
+                  <p className="text-xl font-bold text-foreground">100%</p>
+                  <p className="text-xs text-muted-foreground">TypeScript Typed</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 border border-primary/20 text-primary shrink-0">
+                  <ShieldCheck className="h-5 w-5" />
+                </div>
+                <div>
+                  <p className="text-xl font-bold text-foreground">0 ms</p>
+                  <p className="text-xs text-muted-foreground">Zero FOUC & Shift</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3 col-span-2 sm:col-span-1">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 border border-primary/20 text-primary shrink-0">
+                  <Sparkles className="h-5 w-5" />
+                </div>
+                <div>
+                  <p className="text-xl font-bold text-foreground">60 FPS</p>
+                  <p className="text-xs text-muted-foreground">GPU Motion</p>
+                </div>
+              </div>
+            </motion.div>
           </motion.div>
 
-          {/* Quick Metrics Badges */}
+          {/* Right Column (5 cols): Interactive 3D Tech Sphere */}
           <motion.div
-            variants={itemVariants}
-            className="grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-8 pt-10 border-t border-border/40 w-full max-w-4xl text-left will-change-transform will-change-opacity"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="lg:col-span-5 flex items-center justify-center"
           >
-            <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 border border-primary/20 text-primary">
-                <Code2 className="h-5 w-5" />
-              </div>
-              <div>
-                <p className="text-xl font-bold text-foreground">100%</p>
-                <p className="text-xs text-muted-foreground">TypeScript Strictly Typed</p>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 border border-primary/20 text-primary">
-                <ShieldCheck className="h-5 w-5" />
-              </div>
-              <div>
-                <p className="text-xl font-bold text-foreground">0 ms</p>
-                <p className="text-xs text-muted-foreground">Zero FOUC & Shift</p>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-3 col-span-2 sm:col-span-1">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 border border-primary/20 text-primary">
-                <Sparkles className="h-5 w-5" />
-              </div>
-              <div>
-                <p className="text-xl font-bold text-foreground">60 FPS</p>
-                <p className="text-xs text-muted-foreground">GPU Accelerated Motion</p>
-              </div>
-            </div>
+            <TechSphere3D />
           </motion.div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
