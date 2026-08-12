@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Link from "next/link";
 import { NavItem } from "@/types/navigation";
 import { Logo } from "./logo";
 import { DesktopNav } from "./desktop-nav";
@@ -10,10 +11,9 @@ import { cn } from "@/lib/utils";
 
 const defaultNavItems: NavItem[] = [
   { label: "Home", href: "/" },
-  { label: "Features", href: "#features" },
-  { label: "Design Tokens", href: "#tokens" },
-  { label: "Components", href: "#components", badge: "New" },
-  { label: "Documentation", href: "#docs" },
+  { label: "Services", href: "/#services" },
+  { label: "Portfolio", href: "/#portfolio" },
+  { label: "Contact Us", href: "/contact", badge: "Inquire" },
 ];
 
 interface NavbarProps {
@@ -33,7 +33,6 @@ export function Navbar({ items = defaultNavItems, className }: NavbarProps) {
       }
     };
 
-    // Set initial scroll position state
     handleScroll();
 
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -61,12 +60,12 @@ export function Navbar({ items = defaultNavItems, className }: NavbarProps) {
         <div className="flex items-center gap-3">
           <div className="hidden md:flex items-center gap-3">
             <ThemeToggle />
-            <button
-              type="button"
+            <Link
+              href="/contact"
               className="rounded-xl bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-xs transition-all hover:bg-primary/90 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 active:scale-95"
             >
               Get Started
-            </button>
+            </Link>
           </div>
 
           {/* Mobile Navigation Drawer */}
